@@ -5,9 +5,15 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@vueuse/nuxt',
   ],
+
+  site: {
+    url: 'https://hillger.net',
+  },
 
   css: ['~/assets/css/base.css'],
 
@@ -49,6 +55,25 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#0a0a0f' },
+        // Open Graph
+        { property: 'og:type', content: 'profile' },
+        { property: 'og:title', content: 'Marco Hillger | Senior Fullstack Developer' },
+        { property: 'og:description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
+        { property: 'og:image', content: 'https://hillger.net/og-image.png' },
+        { property: 'og:url', content: 'https://hillger.net' },
+        { property: 'og:site_name', content: 'Marco Hillger' },
+        { property: 'og:locale', content: 'de_DE' },
+        { property: 'og:locale:alternate', content: 'en_US' },
+        // Twitter
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@SeoFood' },
+        { name: 'twitter:creator', content: '@SeoFood' },
+        { name: 'twitter:title', content: 'Marco Hillger | Senior Fullstack Developer' },
+        { name: 'twitter:description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
+        { name: 'twitter:image', content: 'https://hillger.net/og-image.png' },
+        // Profile
+        { property: 'profile:first_name', content: 'Marco' },
+        { property: 'profile:last_name', content: 'Hillger' },
       ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
