@@ -27,25 +27,37 @@ const currentYear = new Date().getFullYear()
                   href="https://www.linkedin.com/in/marco-hillger"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="footer__link"
+                  class="footer__icon-link"
+                  aria-label="LinkedIn"
                 >
-                  LinkedIn
+                  <Icon name="simple-icons:linkedin" />
                 </a>
                 <a
                   href="https://github.com/SeoFood"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="footer__link"
+                  class="footer__icon-link"
+                  aria-label="GitHub"
                 >
-                  GitHub
+                  <Icon name="simple-icons:github" />
                 </a>
                 <a
                   href="https://x.com/SeoFood"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="footer__link"
+                  class="footer__icon-link"
+                  aria-label="X"
                 >
-                  X
+                  <Icon name="simple-icons:x" />
+                </a>
+                <a
+                  href="https://www.reddit.com/user/SeoFood/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__icon-link"
+                  aria-label="Reddit"
+                >
+                  <Icon name="simple-icons:reddit" />
                 </a>
               </div>
             </div>
@@ -123,6 +135,29 @@ const currentYear = new Date().getFullYear()
 .footer__social {
   display: flex;
   gap: var(--space-4);
+}
+
+.footer__icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.footer__icon-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.footer__icon-link :deep(svg) {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .footer__bottom {
