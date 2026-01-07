@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Marco Hillger | Senior Fullstack Developer",
+    "description": "Senior Fullstack Developer with 17+ years of experience. E-Commerce, production automation, scalable web architectures."
+  },
+  "nav": {
+    "project": "Project",
+    "experience": "Experience",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Marco Hillger",
+    "title": "Senior Fullstack Developer",
+    "tagline": "I build systems that connect production with e-commerce.",
+    "cta": "View Project"
+  },
+  "caseStudy": {
+    "label": "Featured Project",
+    "headline": "11 years. One system. Built from scratch.",
+    "intro": "From 2013 to 2024, I founded and led SeoFood - an e-commerce company with entirely self-developed infrastructure.",
+    "systems": {
+      "shop": {
+        "title": "Shop System",
+        "description": "Custom e-commerce platform with live preview for personalized engravings. Customers see exactly what they'll get in real-time – a configurator no standard shop could provide.",
+        "tech": "Vue.js, Laravel, MySQL"
+      },
+      "wms": {
+        "title": "WawiFood",
+        "description": "Custom warehouse management system for inventory control, stock management, and order processing with real-time synchronization to the shop.",
+        "tech": "Laravel, MySQL, REST APIs"
+      },
+      "automation": {
+        "title": "Engraving Automation",
+        "description": "Automatic control of laser and CNC engraving machines via PDF generation and printer drivers. Event-based system for real-time order processing.",
+        "tech": "PHP, PDF Generation, Event-driven"
+      }
+    },
+    "architecture": {
+      "title": "System Architecture",
+      "engraving": "Engraving Machines"
+    },
+    "highlights": {
+      "title": "Highlights",
+      "item1": "Docker infrastructure with CI/CD pipelines on AWS",
+      "item2": "Real-time event processing for immediate order handling",
+      "item3": "Scalable architecture for growing order volume"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "positions": {
+      "valuemedia": {
+        "company": "valuemedia ecommerce GmbH",
+        "role": "Software Engineer",
+        "period": "2024 - present",
+        "description": "E-commerce systems with Shopify, TypeScript frontend, REST APIs for order management."
+      },
+      "seofood": {
+        "company": "SeoFood UG",
+        "role": "Founder & Lead Developer",
+        "period": "2013 - 2024",
+        "description": "Founded and led an e-commerce company. Developed all technical systems."
+      },
+      "finanzen": {
+        "company": "finanzen Group",
+        "role": "Senior Developer",
+        "period": "2006 - 2013",
+        "description": "Web applications in the finance sector, backend development, API design and integration."
+      }
+    }
+  },
+  "background": {
+    "education": {
+      "title": "Education",
+      "degree": "Bachelor of Arts – Information and Communication Management",
+      "school": "SRH University Berlin",
+      "period": "2003 – 2006"
+    },
+    "languages": {
+      "title": "Languages",
+      "german": {
+        "name": "German",
+        "level": "Native"
+      },
+      "english": {
+        "name": "English",
+        "level": "Business fluent"
+      }
+    }
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "apis": "APIs",
+      "devops": "DevOps",
+      "ecommerce": "E-Commerce"
+    }
+  },
+  "interests": {
+    "label": "Private",
+    "title": "Interests",
+    "items": {
+      "homeAutomation": {
+        "title": "Smart Home & Home Automation",
+        "description": "Building a fully automated smart home with Home Assistant. Connecting sensors, actuators, and services into intelligent automations for lighting, heating, security, and energy management.",
+        "tech": "Home Assistant, MQTT, Zigbee, ESPHome, Node-RED"
+      },
+      "networking": {
+        "title": "Networking & Security",
+        "description": "Built complete home network with UniFi infrastructure. Segmentation with VLANs, separate networks for guests and IoT devices, firewall rules for maximum security.",
+        "tech": "UniFi, VLANs, Firewall, Network Segmentation"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Interested in working together? I look forward to hearing from you.",
+    "email": "Email",
+    "links": "Links"
+  },
+  "footer": {
+    "copyright": "Marco Hillger"
+  }
+}
