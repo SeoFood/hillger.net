@@ -30,5 +30,4 @@ logs
 # Bun
 bun.lockb
 
-# Reference documents (private)
-reference/
+.vercel
