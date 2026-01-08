@@ -5,6 +5,7 @@ const interests = [
   { key: 'homeAutomation' },
   { key: 'networking' },
   { key: 'ai' },
+  { key: 'travel' },
 ]
 </script>
 
@@ -66,6 +67,22 @@ const interests = [
             <h3 class="interest-card__title">{{ t('interests.items.ai.title') }}</h3>
             <p class="interest-card__description">{{ t('interests.items.ai.description') }}</p>
             <span class="interest-card__tech mono">{{ t('interests.items.ai.tech') }}</span>
+          </div>
+        </div>
+
+        <!-- Travel -->
+        <div class="interest-card">
+          <div class="interest-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+          </div>
+          <div class="interest-card__content">
+            <h3 class="interest-card__title">{{ t('interests.items.travel.title') }}</h3>
+            <p class="interest-card__description">{{ t('interests.items.travel.description') }}</p>
+            <span class="interest-card__tech mono">{{ t('interests.items.travel.tech') }}</span>
           </div>
         </div>
       </div>
@@ -143,6 +160,7 @@ const interests = [
 .interest-card__tech {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  margin-top: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
 }
 </style>

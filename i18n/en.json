@@ -117,6 +117,11 @@
         "title": "Artificial Intelligence",
         "description": "Fascinated by the development of LLMs and their practical applications. Experimenting with various models, prompt engineering, and integrating AI tools into development workflows.",
         "tech": "Claude, GPT, Ollama, Prompt Engineering"
+      },
+      "travel": {
+        "title": "Travel",
+        "description": "Discovering new cultures, places, and especially cuisines. Local food is often the highlight of every trip.",
+        "tech": "Europe, USA, Culinary"
       }
     }
   },

@@ -117,6 +117,11 @@
         "title": "Künstliche Intelligenz",
         "description": "Faszination für die Entwicklung von LLMs und deren praktische Anwendung. Experimentieren mit verschiedenen Modellen, Prompt Engineering und Integration von AI-Tools in Entwicklungsworkflows.",
         "tech": "Claude, GPT, Ollama, Prompt Engineering"
+      },
+      "travel": {
+        "title": "Reisen",
+        "description": "Neue Kulturen, Orte und vor allem Küchen entdecken. Die lokale Kulinarik ist oft das Highlight jeder Reise.",
+        "tech": "Europa, USA, Kulinarik"
       }
     }
   },
