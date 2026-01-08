@@ -4,6 +4,7 @@ const { t } = useI18n()
 const interests = [
   { key: 'homeAutomation' },
   { key: 'networking' },
+  { key: 'ai' },
 ]
 </script>
 
@@ -43,6 +44,28 @@ const interests = [
             <h3 class="interest-card__title">{{ t('interests.items.networking.title') }}</h3>
             <p class="interest-card__description">{{ t('interests.items.networking.description') }}</p>
             <span class="interest-card__tech mono">{{ t('interests.items.networking.tech') }}</span>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="interest-card">
+          <div class="interest-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v4"/>
+              <path d="M12 18v4"/>
+              <path d="M4.93 4.93l2.83 2.83"/>
+              <path d="M16.24 16.24l2.83 2.83"/>
+              <path d="M2 12h4"/>
+              <path d="M18 12h4"/>
+              <path d="M4.93 19.07l2.83-2.83"/>
+              <path d="M16.24 7.76l2.83-2.83"/>
+            </svg>
+          </div>
+          <div class="interest-card__content">
+            <h3 class="interest-card__title">{{ t('interests.items.ai.title') }}</h3>
+            <p class="interest-card__description">{{ t('interests.items.ai.description') }}</p>
+            <span class="interest-card__tech mono">{{ t('interests.items.ai.tech') }}</span>
           </div>
         </div>
       </div>
