@@ -112,6 +112,11 @@
         "title": "Networking & Security",
         "description": "Built complete home network with UniFi infrastructure. Segmentation with VLANs, separate networks for guests and IoT devices, firewall rules for maximum security.",
         "tech": "UniFi, VLANs, Firewall, Network Segmentation"
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Fascinated by the development of LLMs and their practical applications. Experimenting with various models, prompt engineering, and integrating AI tools into development workflows.",
+        "tech": "Claude, GPT, Ollama, Prompt Engineering"
       }
     }
   },
