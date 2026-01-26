@@ -13,6 +13,11 @@ const otherLocaleName = computed(() => {
   return locale.value === 'de' ? 'EN' : 'DE'
 })
 
+// Generate anchor links that work from any page
+function anchorLink(hash: string) {
+  return `${localePath('/')}#${hash}`
+}
+
 function closeMenu() {
   isMenuOpen.value = false
 }
@@ -32,11 +37,11 @@ watch(() => route.fullPath, () => {
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-8">
-        <a href="#project" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.project') }}</a>
-        <a href="#experience" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.experience') }}</a>
-        <a href="#stack" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.stack') }}</a>
+        <NuxtLink :to="anchorLink('project')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.project') }}</NuxtLink>
+        <NuxtLink :to="anchorLink('experience')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.experience') }}</NuxtLink>
+        <NuxtLink :to="anchorLink('stack')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.stack') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.blog') }}</NuxtLink>
-        <a href="#contact" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.contact') }}</a>
+        <NuxtLink :to="anchorLink('contact')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.contact') }}</NuxtLink>
       </nav>
 
       <div class="flex items-center gap-4">
@@ -90,27 +95,27 @@ watch(() => route.fullPath, () => {
         class="md:hidden absolute top-16 left-0 right-0 bg-bg-primary/95 backdrop-blur-[10px] border-b border-border"
       >
         <div class="container py-6 flex flex-col gap-4">
-          <a
-            href="#project"
+          <NuxtLink
+            :to="anchorLink('project')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
             @click="closeMenu"
           >
             {{ $t('nav.project') }}
-          </a>
-          <a
-            href="#experience"
+          </NuxtLink>
+          <NuxtLink
+            :to="anchorLink('experience')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
             @click="closeMenu"
           >
             {{ $t('nav.experience') }}
-          </a>
-          <a
-            href="#stack"
+          </NuxtLink>
+          <NuxtLink
+            :to="anchorLink('stack')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
             @click="closeMenu"
           >
             {{ $t('nav.stack') }}
-          </a>
+          </NuxtLink>
           <NuxtLink
             :to="localePath('/blog')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
@@ -118,13 +123,13 @@ watch(() => route.fullPath, () => {
           >
             {{ $t('nav.blog') }}
           </NuxtLink>
-          <a
-            href="#contact"
+          <NuxtLink
+            :to="anchorLink('contact')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
             @click="closeMenu"
           >
             {{ $t('nav.contact') }}
-          </a>
+          </NuxtLink>
 
           <div class="flex items-center gap-4 pt-4 border-t border-border mt-2">
             <a
