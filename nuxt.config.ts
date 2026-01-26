@@ -4,12 +4,24 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    '@nuxt/content',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@vueuse/nuxt',
   ],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: ['typescript', 'javascript', 'vue', 'html', 'css', 'json', 'bash', 'php', 'yaml', 'markdown'],
+        },
+      },
+    },
+  },
 
   site: {
     url: 'https://hillger.net',
@@ -34,6 +46,9 @@ export default defineNuxtConfig({
   },
 
   fonts: {
+    defaults: {
+      preload: true,
+    },
     families: [
       {
         name: 'JetBrains Mono',
@@ -51,6 +66,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Marco Hillger | Senior Fullstack Developer',
+      style: [
+        {
+          innerHTML: 'html,body{background:#0a0a0f;color:#f4f1eb}',
+        },
+      ],
       meta: [
         { name: 'description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

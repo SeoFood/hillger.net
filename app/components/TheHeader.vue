@@ -22,6 +22,7 @@ const otherLocaleName = computed(() => {
         <a href="#project" class="header__link">{{ $t('nav.project') }}</a>
         <a href="#experience" class="header__link">{{ $t('nav.experience') }}</a>
         <a href="#stack" class="header__link">{{ $t('nav.stack') }}</a>
+        <NuxtLink :to="localePath('/blog')" class="header__link">{{ $t('nav.blog') }}</NuxtLink>
         <a href="#contact" class="header__link">{{ $t('nav.contact') }}</a>
       </nav>
 

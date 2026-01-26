@@ -7,7 +7,14 @@
     "project": "Project",
     "experience": "Experience",
     "stack": "Stack",
+    "blog": "Blog",
     "contact": "Contact"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Technical articles, projects, and thoughts on web development, home automation, and more.",
+    "backToList": "Back to overview",
+    "empty": "No articles yet."
   },
   "hero": {
     "greeting": "Marco Hillger",
