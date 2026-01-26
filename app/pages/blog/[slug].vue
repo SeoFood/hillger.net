@@ -31,148 +31,174 @@ function formatDate(dateString: string) {
     day: 'numeric',
   })
 }
+
+// Share functionality
+const copied = ref(false)
+
+const postUrl = computed(() => {
+  if (import.meta.client) {
+    return window.location.href
+  }
+  return `https://hillger.net${route.fullPath}`
+})
+
+const shareText = computed(() => {
+  return `${post.value?.title} von @SeoFood`
+})
+
+const shareLinks = computed(() => ({
+  x: `https://x.com/intent/tweet?text=${encodeURIComponent(shareText.value)}&url=${encodeURIComponent(postUrl.value)}`,
+  bluesky: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${post.value?.title}\n\n${postUrl.value}`)}`,
+  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl.value)}`,
+  mastodon: `https://mastodonshare.com/?text=${encodeURIComponent(shareText.value)}&url=${encodeURIComponent(postUrl.value)}`,
+}))
+
+async function copyLink() {
+  try {
+    await navigator.clipboard.writeText(postUrl.value)
+    copied.value = true
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (err) {
+    console.error('Failed to copy:', err)
+  }
+}
 </script>
 
 <template>
-  <main class="post">
-    <article class="container container--narrow">
-      <header class="post__header">
-        <NuxtLink :to="localePath('/blog')" class="post__back">
+  <main class="pt-[calc(64px+3rem)] pb-16 min-h-screen">
+    <article class="container max-w-3xl">
+      <header class="mb-10">
+        <NuxtLink :to="localePath('/blog')" class="inline-block text-sm text-text-secondary mb-6 transition-colors duration-fast hover:text-accent">
           &larr; {{ t('blog.backToList') }}
         </NuxtLink>
-        <time class="post__date mono">{{ formatDate(post.date) }}</time>
-        <h1 class="post__title">{{ post.title }}</h1>
+        <time class="block font-display text-xs text-text-muted uppercase tracking-wide mb-3">{{ formatDate(post.date) }}</time>
+        <h1 class="text-3xl md:text-4xl leading-tight">{{ post.title }}</h1>
       </header>
 
-      <div class="post__content">
+      <div class="prose">
         <ContentRenderer :value="post" />
+      </div>
+
+      <!-- Share Section -->
+      <div class="mt-12 pt-8 border-t border-border">
+        <p class="font-display text-xs text-text-muted uppercase tracking-wide mb-4">{{ t('blog.share') }}</p>
+        <div class="flex flex-wrap gap-3">
+          <!-- X (Twitter) -->
+          <a
+            :href="shareLinks.x"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+            aria-label="Share on X"
+          >
+            <Icon name="simple-icons:x" class="w-4 h-4" />
+            <span>X</span>
+          </a>
+
+          <!-- Bluesky -->
+          <a
+            :href="shareLinks.bluesky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+            aria-label="Share on Bluesky"
+          >
+            <Icon name="simple-icons:bluesky" class="w-4 h-4" />
+            <span>Bluesky</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            :href="shareLinks.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+            aria-label="Share on LinkedIn"
+          >
+            <Icon name="simple-icons:linkedin" class="w-4 h-4" />
+            <span>LinkedIn</span>
+          </a>
+
+          <!-- Mastodon -->
+          <a
+            :href="shareLinks.mastodon"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+            aria-label="Share on Mastodon"
+          >
+            <Icon name="simple-icons:mastodon" class="w-4 h-4" />
+            <span>Mastodon</span>
+          </a>
+
+          <!-- Copy Link -->
+          <button
+            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+            :class="{ 'border-accent text-accent': copied }"
+            @click="copyLink"
+          >
+            <Icon :name="copied ? 'heroicons:check' : 'heroicons:link'" class="w-4 h-4" />
+            <span>{{ copied ? t('blog.copied') : t('blog.copyLink') }}</span>
+          </button>
+        </div>
       </div>
     </article>
   </main>
 </template>
 
-<style scoped>
-.post {
-  padding-top: calc(64px + var(--space-12));
-  padding-bottom: var(--space-16);
-  min-height: 100vh;
+<style>
+.prose {
+  @apply text-text-secondary leading-loose;
 }
 
-.container--narrow {
-  max-width: 768px;
+.prose h2 {
+  @apply text-2xl text-text-primary mt-10 mb-4;
 }
 
-.post__header {
-  margin-bottom: var(--space-10);
+.prose h3 {
+  @apply text-xl text-text-primary mt-8 mb-3;
 }
 
-.post__back {
-  display: inline-block;
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
-  transition: color var(--transition-fast);
+.prose p {
+  @apply mb-4;
 }
 
-.post__back:hover {
-  color: var(--color-accent);
+.prose a {
+  @apply text-accent underline underline-offset-2;
 }
 
-.post__date {
-  display: block;
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-3);
+.prose a:hover {
+  @apply text-text-primary;
 }
 
-.post__title {
-  font-size: var(--text-3xl);
-  line-height: 1.2;
+.prose strong {
+  @apply text-text-primary font-semibold;
 }
 
-@media (min-width: 768px) {
-  .post__title {
-    font-size: var(--text-4xl);
-  }
+.prose code {
+  @apply font-display text-[0.9em] bg-bg-tertiary px-1.5 py-0.5 rounded;
 }
 
-.post__content {
-  color: var(--color-text-secondary);
-  line-height: 1.8;
+.prose pre {
+  @apply bg-bg-tertiary border border-border rounded-lg p-4 overflow-x-auto mb-6;
 }
 
-.post__content :deep(h2) {
-  font-size: var(--text-2xl);
-  color: var(--color-text-primary);
-  margin-top: var(--space-10);
-  margin-bottom: var(--space-4);
+.prose pre code {
+  @apply bg-transparent p-0;
 }
 
-.post__content :deep(h3) {
-  font-size: var(--text-xl);
-  color: var(--color-text-primary);
-  margin-top: var(--space-8);
-  margin-bottom: var(--space-3);
+.prose ul,
+.prose ol {
+  @apply mb-4 pl-6;
 }
 
-.post__content :deep(p) {
-  margin-bottom: var(--space-4);
+.prose li {
+  @apply mb-2;
 }
 
-.post__content :deep(a) {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.post__content :deep(a:hover) {
-  color: var(--color-text-primary);
-}
-
-.post__content :deep(strong) {
-  color: var(--color-text-primary);
-  font-weight: 600;
-}
-
-.post__content :deep(code) {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.9em;
-  background: var(--color-bg-tertiary);
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-}
-
-.post__content :deep(pre) {
-  background: var(--color-bg-tertiary);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: var(--space-4);
-  overflow-x: auto;
-  margin-bottom: var(--space-6);
-}
-
-.post__content :deep(pre code) {
-  background: none;
-  padding: 0;
-}
-
-.post__content :deep(ul),
-.post__content :deep(ol) {
-  margin-bottom: var(--space-4);
-  padding-left: var(--space-6);
-}
-
-.post__content :deep(li) {
-  margin-bottom: var(--space-2);
-}
-
-.post__content :deep(blockquote) {
-  border-left: 3px solid var(--color-accent);
-  padding-left: var(--space-4);
-  margin: var(--space-6) 0;
-  color: var(--color-text-secondary);
-  font-style: italic;
+.prose blockquote {
+  @apply border-l-[3px] border-accent pl-4 my-6 text-text-secondary italic;
 }
 </style>

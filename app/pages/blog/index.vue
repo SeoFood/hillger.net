@@ -16,11 +16,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="blog">
+  <main class="pt-[calc(64px+4rem)] pb-16 min-h-screen">
     <div class="container">
-      <h1 class="blog__title">{{ t('blog.title') }}</h1>
+      <h1 class="mb-12">{{ t('blog.title') }}</h1>
 
-      <div v-if="posts && posts.length > 0" class="blog__grid">
+      <div v-if="posts && posts.length > 0" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <BlogCard
           v-for="post in posts"
           :key="post.path"
@@ -31,43 +31,9 @@ useSeoMeta({
         />
       </div>
 
-      <p v-else class="blog__empty">
+      <p v-else class="text-text-secondary text-lg">
         {{ t('blog.empty') }}
       </p>
     </div>
   </main>
 </template>
-
-<style scoped>
-.blog {
-  padding-top: calc(64px + var(--space-16));
-  padding-bottom: var(--space-16);
-  min-height: 100vh;
-}
-
-.blog__title {
-  margin-bottom: var(--space-12);
-}
-
-.blog__grid {
-  display: grid;
-  gap: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .blog__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .blog__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.blog__empty {
-  color: var(--color-text-secondary);
-  font-size: var(--text-lg);
-}
-</style>

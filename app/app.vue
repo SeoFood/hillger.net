@@ -52,22 +52,10 @@ useHead({
 </script>
 
 <template>
-  <div class="app">
+  <div class="min-h-screen flex flex-col">
     <TheHeader />
-    <main>
+    <main class="flex-1">
       <NuxtPage />
     </main>
   </div>
 </template>
-
-<style>
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-</style>

@@ -1,153 +1,106 @@
-@import './variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-base leading-normal text-text-primary bg-bg-primary min-h-screen;
+  }
+
+  /* Blueprint grid background */
+  body::before {
+    content: '';
+    @apply fixed inset-0 pointer-events-none -z-10 opacity-30;
+    background-image:
+      linear-gradient(theme('colors.border') 1px, transparent 1px),
+      linear-gradient(90deg, theme('colors.border') 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium leading-tight text-text-primary;
+  }
+
+  h1 {
+    @apply text-5xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  p {
+    @apply text-text-secondary max-w-prose;
+  }
+
+  /* Links */
+  a {
+    @apply text-accent no-underline transition-colors duration-fast;
+  }
+
+  a:hover {
+    @apply text-accent-hover;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-accent text-bg-primary;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-2 outline-accent outline-offset-2;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-hover rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-muted;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer components {
+  .container {
+    @apply w-full max-w-container mx-auto px-6 md:px-8 lg:px-12;
+  }
 
-body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: var(--leading-normal);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  min-height: 100vh;
-}
-
-/* Blueprint grid background */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--color-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  line-height: var(--leading-tight);
-  color: var(--color-text-primary);
-}
-
-h1 {
-  font-size: var(--text-5xl);
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-size: var(--text-3xl);
-  letter-spacing: -0.01em;
-}
-
-h3 {
-  font-size: var(--text-2xl);
-}
-
-p {
-  color: var(--color-text-secondary);
-  max-width: 65ch;
-}
-
-/* Links */
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover {
-  color: var(--color-accent-hover);
-}
-
-/* Selection */
-::selection {
-  background-color: var(--color-accent);
-  color: var(--color-bg-primary);
-}
-
-/* Container */
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--container-padding);
-}
-
-/* Section spacing */
-section {
-  padding-block: var(--space-12);
-  scroll-margin-top: 80px;
-}
-
-@media (min-width: 768px) {
   section {
-    padding-block: var(--space-16);
+    @apply py-12 md:py-16 scroll-mt-20;
   }
 }
 
-/* Monospace utility */
-.mono {
-  font-family: var(--font-display);
-}
-
-/* Accent text */
-.accent {
-  color: var(--color-accent);
-}
-
-/* Subtle animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@layer utilities {
+  .mono {
+    @apply font-display;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .accent {
+    @apply text-accent;
   }
-}
 
-.animate-in {
-  animation: fadeInUp var(--transition-slow) ease-out forwards;
-}
-
-/* Focus styles */
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-border-hover);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  .animate-in {
+    @apply animate-fade-in-up;
+  }
 }

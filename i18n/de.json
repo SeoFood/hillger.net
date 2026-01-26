@@ -14,7 +14,10 @@
     "title": "Blog",
     "description": "Technische Artikel, Projekte und Gedanken zu Webentwicklung, Home Automation und mehr.",
     "backToList": "Zur Übersicht",
-    "empty": "Noch keine Artikel vorhanden."
+    "empty": "Noch keine Artikel vorhanden.",
+    "share": "Teilen",
+    "copyLink": "Link kopieren",
+    "copied": "Kopiert!"
   },
   "hero": {
     "greeting": "Marco Hillger",
