@@ -154,11 +154,11 @@ async function copyLink() {
 }
 
 .prose h2 {
-  @apply text-2xl text-text-primary mt-10 mb-4;
+  @apply font-body text-2xl text-text-primary mt-10 mb-4;
 }
 
 .prose h3 {
-  @apply text-xl text-text-primary mt-8 mb-3;
+  @apply font-body text-xl text-text-primary mt-8 mb-3;
 }
 
 .prose p {
@@ -189,9 +189,12 @@ async function copyLink() {
   @apply bg-transparent p-0;
 }
 
-.prose ul,
+.prose ul {
+  @apply mb-4 pl-6 list-disc;
+}
+
 .prose ol {
-  @apply mb-4 pl-6;
+  @apply mb-4 pl-6 list-decimal;
 }
 
 .prose li {
