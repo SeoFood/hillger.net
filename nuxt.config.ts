@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://hillger.net',
+    url: 'https://www.hillger.net',
   },
 
   css: ['~/assets/css/base.css'],
@@ -80,8 +80,8 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'profile' },
         { property: 'og:title', content: 'Marco Hillger | Senior Fullstack Developer' },
         { property: 'og:description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
-        { property: 'og:image', content: 'https://hillger.net/og-image.png' },
-        { property: 'og:url', content: 'https://hillger.net' },
+        { property: 'og:image', content: 'https://www.hillger.net/og-image.png' },
+        { property: 'og:url', content: 'https://www.hillger.net' },
         { property: 'og:site_name', content: 'Marco Hillger' },
         { property: 'og:locale', content: 'de_DE' },
         { property: 'og:locale:alternate', content: 'en_US' },
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
         { name: 'twitter:creator', content: '@SeoFood' },
         { name: 'twitter:title', content: 'Marco Hillger | Senior Fullstack Developer' },
         { name: 'twitter:description', content: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung. E-Commerce, Produktionsautomatisierung, skalierbare Web-Architekturen.' },
-        { name: 'twitter:image', content: 'https://hillger.net/og-image.png' },
+        { name: 'twitter:image', content: 'https://www.hillger.net/og-image.png' },
         // Profile
         { property: 'profile:first_name', content: 'Marco' },
         { property: 'profile:last_name', content: 'Hillger' },

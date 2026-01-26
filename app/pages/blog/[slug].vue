@@ -39,7 +39,7 @@ const postUrl = computed(() => {
   if (import.meta.client) {
     return window.location.href
   }
-  return `https://hillger.net${route.fullPath}`
+  return `https://www.hillger.net${route.fullPath}`
 })
 
 const shareText = computed(() => {

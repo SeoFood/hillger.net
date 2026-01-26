@@ -8,14 +8,14 @@ useHead({
         '@graph': [
           {
             '@type': 'Person',
-            '@id': 'https://hillger.net/#person',
+            '@id': 'https://www.hillger.net/#person',
             name: 'Marco Hillger',
             givenName: 'Marco',
             familyName: 'Hillger',
             jobTitle: 'Senior Fullstack Developer',
             description: 'Senior Fullstack Developer mit 17+ Jahren Erfahrung in E-Commerce, Produktionsautomatisierung und skalierbaren Web-Architekturen.',
-            image: 'https://hillger.net/avatar.jpg',
-            url: 'https://hillger.net',
+            image: 'https://www.hillger.net/avatar.jpg',
+            url: 'https://www.hillger.net',
             sameAs: [
               'https://www.linkedin.com/in/marco-hillger',
               'https://github.com/SeoFood',
@@ -37,11 +37,11 @@ useHead({
           },
           {
             '@type': 'WebSite',
-            '@id': 'https://hillger.net/#website',
-            url: 'https://hillger.net',
+            '@id': 'https://www.hillger.net/#website',
+            url: 'https://www.hillger.net',
             name: 'Marco Hillger | Senior Fullstack Developer',
             description: 'Portfolio von Marco Hillger - Senior Fullstack Developer',
-            publisher: { '@id': 'https://hillger.net/#person' },
+            publisher: { '@id': 'https://www.hillger.net/#person' },
             inLanguage: ['de-DE', 'en-US'],
           },
         ],
