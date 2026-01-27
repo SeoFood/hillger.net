@@ -109,6 +109,10 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/blog/developer-workflows-clawdbot': { redirect: '/blog/developer-workflows-moltbot' },
+  },
+
   nitro: {
     preset: 'vercel-static',
   },
