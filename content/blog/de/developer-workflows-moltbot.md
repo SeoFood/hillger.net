@@ -128,7 +128,7 @@ Das Gateway selbst ist loopback-first - es bindet standardmäßig auf `127.0.0.1
 
 ## Grenzen und Erwartungen
 
-Moltbot ist kein Ersatz für eine vollwertige IDE mit AI-Integration. Für tiefgreifendes Refactoring oder komplexe Multi-File-Änderungen ist ein Desktop-Setup mit Cursor oder Claude Code besser geeignet.
+Moltbot ist kein Ersatz für eine vollwertige IDE mit AI-Integration. Für tiefgreifendes Refactoring oder komplexe Multi-File-Änderungen ist ein Desktop-Setup mit Cursor oder ähnlichen AI-IDEs besser geeignet.
 
 Die Stärke liegt in der **Accessibility**: Du hast immer einen AI-Assistenten dabei, der deinen Code kennt, über die App, die du sowieso offen hast. Das senkt die Hemmschwelle für schnelle Fragen und hält den Kontext zwischen Sessions.
 
