@@ -17,7 +17,7 @@ const highlightKeys = ['item1', 'item2', 'item3']
         <div class="flex flex-col bg-bg-tertiary border border-border rounded-lg p-6 transition-all duration-base hover:border-accent hover:shadow-glow">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-7 h-7 text-accent shrink-0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full" aria-hidden="true">
                 <path d="M3 9h18v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
                 <path d="M3 9l2.45-4.9A2 2 0 017.24 3h9.52a2 2 0 011.79 1.1L21 9"/>
                 <path d="M12 3v6"/>
@@ -33,7 +33,7 @@ const highlightKeys = ['item1', 'item2', 'item3']
         <div class="flex flex-col bg-bg-tertiary border border-border rounded-lg p-6 transition-all duration-base hover:border-accent hover:shadow-glow">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-7 h-7 text-accent shrink-0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full" aria-hidden="true">
                 <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
               </svg>
             </div>
@@ -47,7 +47,7 @@ const highlightKeys = ['item1', 'item2', 'item3']
         <div class="flex flex-col bg-bg-tertiary border border-border rounded-lg p-6 transition-all duration-base hover:border-accent hover:shadow-glow">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-7 h-7 text-accent shrink-0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full" aria-hidden="true">
                 <path d="M6 3h12l4 6-10 12L2 9l4-6z"/>
                 <path d="M2 9h20"/>
                 <path d="M10 9l2 12 2-12"/>

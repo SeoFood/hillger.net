@@ -25,11 +25,11 @@ useSeoMeta({
 
 function formatDate(dateString: string) {
   const date = new Date(dateString)
-  return date.toLocaleDateString(locale.value === 'de' ? 'de-DE' : 'en-US', {
+  return new Intl.DateTimeFormat(locale.value === 'de' ? 'de-DE' : 'en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  })
+  }).format(date)
 }
 
 // Share functionality

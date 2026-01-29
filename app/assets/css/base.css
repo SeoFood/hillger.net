@@ -9,6 +9,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply font-body text-base leading-normal text-text-primary bg-bg-primary min-h-screen;
   }

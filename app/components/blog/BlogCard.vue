@@ -8,15 +8,16 @@ interface Props {
 
 defineProps<Props>()
 
+const { locale } = useI18n()
 const localePath = useLocalePath()
 
 function formatDate(dateString: string) {
   const date = new Date(dateString)
-  return date.toLocaleDateString('de-DE', {
+  return new Intl.DateTimeFormat(locale.value === 'de' ? 'de-DE' : 'en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  })
+  }).format(date)
 }
 </script>
 

@@ -9,6 +9,9 @@ const { t } = useI18n()
         <img
           src="/avatar.jpeg"
           alt="Marco Hillger"
+          width="120"
+          height="120"
+          fetchpriority="high"
           class="w-20 h-20 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px] rounded-full object-cover border-2 md:border-[3px] border-accent shrink-0 animate-fade-in-up"
         />
         <div class="flex flex-col gap-0.5 md:gap-1">
