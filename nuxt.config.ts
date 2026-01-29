@@ -16,6 +16,10 @@ export default defineNuxtConfig({
   content: {
     build: {
       markdown: {
+        toc: {
+          depth: 3,
+          searchDepth: 3,
+        },
         highlight: {
           theme: 'github-dark',
           langs: ['typescript', 'javascript', 'vue', 'html', 'css', 'json', 'bash', 'php', 'yaml', 'markdown'],

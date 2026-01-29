@@ -68,83 +68,93 @@ async function copyLink() {
 
 <template>
   <main class="pt-[calc(64px+3rem)] pb-16 min-h-screen">
-    <article class="container max-w-3xl">
-      <header class="mb-10">
-        <NuxtLink :to="localePath('/blog')" class="inline-block text-sm text-text-secondary mb-6 transition-colors duration-fast hover:text-accent">
-          &larr; {{ t('blog.backToList') }}
-        </NuxtLink>
-        <time class="block font-display text-xs text-text-muted uppercase tracking-wide mb-3">{{ formatDate(post.date) }}</time>
-        <h1 class="text-3xl md:text-4xl leading-tight">{{ post.title }}</h1>
-      </header>
+    <div class="container max-w-6xl">
+      <div class="flex gap-12">
+        <!-- Main Content -->
+        <article class="flex-1 max-w-3xl">
+          <header class="mb-10">
+            <NuxtLink :to="localePath('/blog')" class="inline-block text-sm text-text-secondary mb-6 transition-colors duration-fast hover:text-accent">
+              &larr; {{ t('blog.backToList') }}
+            </NuxtLink>
+            <time class="block font-display text-xs text-text-muted uppercase tracking-wide mb-3">{{ post ? formatDate(post.date) : '' }}</time>
+            <h1 class="text-3xl md:text-4xl leading-tight">{{ post?.title }}</h1>
+          </header>
 
-      <div class="prose">
-        <ContentRenderer :value="post" />
+          <div class="prose">
+            <ContentRenderer v-if="post" :value="post" />
+          </div>
+
+          <!-- Share Section -->
+          <div class="mt-12 pt-8 border-t border-border">
+            <p class="font-display text-xs text-text-muted uppercase tracking-wide mb-4">{{ t('blog.share') }}</p>
+            <div class="flex flex-wrap gap-3">
+              <!-- X (Twitter) -->
+              <a
+                :href="shareLinks.x"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+                aria-label="Share on X"
+              >
+                <Icon name="simple-icons:x" class="w-4 h-4" />
+                <span>X</span>
+              </a>
+
+              <!-- Bluesky -->
+              <a
+                :href="shareLinks.bluesky"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+                aria-label="Share on Bluesky"
+              >
+                <Icon name="simple-icons:bluesky" class="w-4 h-4" />
+                <span>Bluesky</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                :href="shareLinks.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+                aria-label="Share on LinkedIn"
+              >
+                <Icon name="simple-icons:linkedin" class="w-4 h-4" />
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Mastodon -->
+              <a
+                :href="shareLinks.mastodon"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+                aria-label="Share on Mastodon"
+              >
+                <Icon name="simple-icons:mastodon" class="w-4 h-4" />
+                <span>Mastodon</span>
+              </a>
+
+              <!-- Copy Link -->
+              <button
+                class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
+                :class="{ 'border-accent text-accent': copied }"
+                @click="copyLink"
+              >
+                <Icon :name="copied ? 'heroicons:check' : 'heroicons:link'" class="w-4 h-4" />
+                <span>{{ copied ? t('blog.copied') : t('blog.copyLink') }}</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sticky TOC Sidebar -->
+        <aside class="hidden lg:block w-56 flex-shrink-0">
+          <TableOfContents />
+        </aside>
       </div>
-
-      <!-- Share Section -->
-      <div class="mt-12 pt-8 border-t border-border">
-        <p class="font-display text-xs text-text-muted uppercase tracking-wide mb-4">{{ t('blog.share') }}</p>
-        <div class="flex flex-wrap gap-3">
-          <!-- X (Twitter) -->
-          <a
-            :href="shareLinks.x"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
-            aria-label="Share on X"
-          >
-            <Icon name="simple-icons:x" class="w-4 h-4" />
-            <span>X</span>
-          </a>
-
-          <!-- Bluesky -->
-          <a
-            :href="shareLinks.bluesky"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
-            aria-label="Share on Bluesky"
-          >
-            <Icon name="simple-icons:bluesky" class="w-4 h-4" />
-            <span>Bluesky</span>
-          </a>
-
-          <!-- LinkedIn -->
-          <a
-            :href="shareLinks.linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
-            aria-label="Share on LinkedIn"
-          >
-            <Icon name="simple-icons:linkedin" class="w-4 h-4" />
-            <span>LinkedIn</span>
-          </a>
-
-          <!-- Mastodon -->
-          <a
-            :href="shareLinks.mastodon"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
-            aria-label="Share on Mastodon"
-          >
-            <Icon name="simple-icons:mastodon" class="w-4 h-4" />
-            <span>Mastodon</span>
-          </a>
-
-          <!-- Copy Link -->
-          <button
-            class="flex items-center gap-2 px-4 py-2 bg-bg-secondary border border-border rounded-lg text-sm text-text-secondary transition-all duration-fast hover:border-accent hover:text-text-primary"
-            :class="{ 'border-accent text-accent': copied }"
-            @click="copyLink"
-          >
-            <Icon :name="copied ? 'heroicons:check' : 'heroicons:link'" class="w-4 h-4" />
-            <span>{{ copied ? t('blog.copied') : t('blog.copyLink') }}</span>
-          </button>
-        </div>
-      </div>
-    </article>
+    </div>
   </main>
 </template>
 
@@ -154,11 +164,19 @@ async function copyLink() {
 }
 
 .prose h2 {
-  @apply font-body text-2xl text-text-primary mt-10 mb-4;
+  @apply font-body text-2xl text-text-primary mt-12 mb-5 no-underline scroll-mt-24;
+}
+
+.prose h2 a {
+  @apply text-text-primary no-underline;
 }
 
 .prose h3 {
-  @apply font-body text-xl text-text-primary mt-8 mb-3;
+  @apply font-body text-lg text-text-primary font-semibold mt-8 mb-3 no-underline scroll-mt-24;
+}
+
+.prose h3 a {
+  @apply text-text-primary no-underline;
 }
 
 .prose p {
@@ -203,5 +221,14 @@ async function copyLink() {
 
 .prose blockquote {
   @apply border-l-[3px] border-accent pl-4 my-6 text-text-secondary italic;
+}
+
+/* Checkbox styling for task lists */
+.prose input[type="checkbox"] {
+  @apply w-4 h-4 mr-2 accent-accent;
+}
+
+.prose li:has(input[type="checkbox"]) {
+  @apply list-none -ml-6;
 }
 </style>

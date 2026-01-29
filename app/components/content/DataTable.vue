@@ -18,19 +18,18 @@ function isHighlighted(index: number, highlightRows?: number[]) {
 </script>
 
 <template>
-  <div class="my-8 overflow-x-auto">
+  <div class="my-6 overflow-x-auto">
     <table
-      class="w-full border-collapse"
-      :class="compact ? 'text-sm' : 'text-base'"
+      class="w-full border-collapse text-sm"
     >
       <thead>
-        <tr class="border-b-2 border-accent/30">
+        <tr class="border-b border-border">
           <th
             v-for="(header, index) in headers"
             :key="index"
-            class="font-display font-semibold text-text-primary bg-bg-tertiary"
+            class="font-body font-medium text-text-muted uppercase tracking-wide text-xs"
             :class="[
-              compact ? 'px-3 py-2' : 'px-4 py-3',
+              compact ? 'px-3 py-2' : 'px-4 py-2.5',
               {
                 'text-left': getAlignment(index, align) === 'left',
                 'text-center': getAlignment(index, align) === 'center',
@@ -46,11 +45,11 @@ function isHighlighted(index: number, highlightRows?: number[]) {
         <tr
           v-for="(row, rowIndex) in rows"
           :key="rowIndex"
-          class="border-b border-border transition-colors"
+          class="border-b border-border/50 transition-colors"
           :class="[
             isHighlighted(rowIndex, highlightRows)
-              ? 'bg-accent/10 border-l-2 border-l-accent'
-              : rowIndex % 2 === 1 ? 'bg-bg-secondary/50' : 'bg-transparent'
+              ? 'bg-accent/5 border-l-2 border-l-accent'
+              : ''
           ]"
         >
           <td
@@ -58,7 +57,7 @@ function isHighlighted(index: number, highlightRows?: number[]) {
             :key="cellIndex"
             class="text-text-secondary"
             :class="[
-              compact ? 'px-3 py-1.5' : 'px-4 py-3',
+              compact ? 'px-3 py-1.5' : 'px-4 py-2.5',
               {
                 'text-left': getAlignment(cellIndex, align) === 'left',
                 'text-center': getAlignment(cellIndex, align) === 'center',
