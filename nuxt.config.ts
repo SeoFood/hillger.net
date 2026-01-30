@@ -114,7 +114,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/blog/developer-workflows-clawdbot': { redirect: '/blog/developer-workflows-moltbot' },
+    '/blog/developer-workflows-clawdbot': { redirect: '/blog/developer-workflows-openclaw' },
+    '/blog/developer-workflows-moltbot': { redirect: '/blog/developer-workflows-openclaw' },
   },
 
   nitro: {
