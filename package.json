@@ -17,6 +17,8 @@
     "@nuxtjs/sitemap": "^7.5.2",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@vueuse/nuxt": "^14.1.0",
+    "@iconify-json/heroicons": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.68",
     "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.0",
     "vue": "^3.5.27",
@@ -25,8 +27,6 @@
   "devDependencies": {
     "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
-    "@iconify-json/heroicons": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.68",
     "@resvg/resvg-js": "^2.6.2",
     "satori": "^0.19.1"
   }
