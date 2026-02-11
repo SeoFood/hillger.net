@@ -30,10 +30,6 @@ useHead({
               '@type': 'EducationalOrganization',
               name: 'SRH Hochschule Berlin',
             },
-            worksFor: {
-              '@type': 'Organization',
-              name: 'valuemedia GmbH',
-            },
           },
           {
             '@type': 'WebSite',
