@@ -27,7 +27,7 @@ const { t } = useI18n()
       <p class="text-lg md:text-xl lg:text-2xl text-text-secondary leading-relaxed mb-6 md:mb-10 lg:mb-12 max-w-[550px] animate-fade-in-up" style="animation-delay: 200ms">
         {{ t('hero.tagline') }}
       </p>
-      <a href="#project" class="inline-flex items-center gap-2 font-display text-sm text-text-primary px-5 py-2.5 md:px-6 md:py-3 border border-border rounded transition-all duration-base hover:border-accent hover:shadow-glow group animate-fade-in-up" style="animation-delay: 300ms">
+      <a href="#projects" class="inline-flex items-center gap-2 font-display text-sm text-text-primary px-5 py-2.5 md:px-6 md:py-3 border border-border rounded transition-all duration-base hover:border-accent hover:shadow-glow group animate-fade-in-up" style="animation-delay: 300ms">
         {{ t('hero.cta') }}
         <span class="transition-transform duration-fast group-hover:translate-y-[3px]">↓</span>
       </a>

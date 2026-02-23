@@ -37,7 +37,7 @@ watch(() => route.fullPath, () => {
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-8">
-        <NuxtLink :to="anchorLink('project')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.project') }}</NuxtLink>
+        <NuxtLink :to="anchorLink('projects')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.projects') }}</NuxtLink>
         <NuxtLink :to="anchorLink('experience')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.experience') }}</NuxtLink>
         <NuxtLink :to="anchorLink('stack')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.stack') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog')" class="text-sm text-text-secondary transition-colors duration-fast hover:text-text-primary">{{ $t('nav.blog') }}</NuxtLink>
@@ -96,11 +96,11 @@ watch(() => route.fullPath, () => {
       >
         <div class="container py-6 flex flex-col gap-4">
           <NuxtLink
-            :to="anchorLink('project')"
+            :to="anchorLink('projects')"
             class="text-base text-text-secondary transition-colors duration-fast hover:text-text-primary py-2"
             @click="closeMenu"
           >
-            {{ $t('nav.project') }}
+            {{ $t('nav.projects') }}
           </NuxtLink>
           <NuxtLink
             :to="anchorLink('experience')"

@@ -4,7 +4,7 @@
     "description": "Senior Fullstack Developer with 17+ years of experience. E-Commerce, production automation, scalable web architectures."
   },
   "nav": {
-    "project": "Project",
+    "projects": "Projects",
     "experience": "Experience",
     "stack": "Stack",
     "blog": "Blog",
@@ -23,10 +23,51 @@
     "greeting": "Marco Hillger",
     "title": "Senior Fullstack Developer",
     "tagline": "I build systems that connect production with e-commerce.",
-    "cta": "View Project"
+    "cta": "View Projects"
+  },
+  "typeWhisper": {
+    "label": "Open Source Project",
+    "headline": "Speech to text. Local. Cross-platform.",
+    "intro": "TypeWhisper is a free, open-source speech-to-text app that converts speech to text directly on your device - no cloud, no subscription. Available for macOS, Windows and iOS.",
+    "systems": {
+      "transcription": {
+        "title": "On-Device Transcription",
+        "description": "Speech recognition runs entirely on-device using WhisperKit, Parakeet TDT and Apple Speech. No audio data leaves your device - maximum privacy with high recognition quality.",
+        "tech": "WhisperKit, Parakeet TDT, Apple Speech"
+      },
+      "processing": {
+        "title": "AI Text Processing",
+        "description": "Transcribed text is optimized through LLM prompts. Per-app profiles automatically adjust formatting and style. A personal dictionary corrects technical terms and names.",
+        "tech": "LLM Prompts, Per-App Profiles, Dictionary"
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Global hotkey for instant access from any app. HTTP API and CLI for automation. Plugin system for Raycast and further integrations.",
+        "tech": "Global Hotkey, HTTP API, CLI, Plugins"
+      }
+    },
+    "architecture": {
+      "title": "Processing Pipeline",
+      "steps": {
+        "input": { "label": "Audio Input", "tech": "Microphone / File" },
+        "ml": { "label": "On-Device ML", "tech": "WhisperKit / Parakeet" },
+        "llm": { "label": "LLM Processing", "tech": "Formatting / Correction" },
+        "output": { "label": "Output", "tech": "Clipboard / App" }
+      }
+    },
+    "highlights": {
+      "title": "Highlights",
+      "item1": "100% local processing - no cloud dependency, full privacy",
+      "item2": "Cross-platform for macOS, Windows and iOS",
+      "item3": "Open source under GPLv3 license - free to use and extend"
+    },
+    "links": {
+      "website": "Website",
+      "github": "GitHub"
+    }
   },
   "caseStudy": {
-    "label": "Featured Project",
+    "label": "E-Commerce Project",
     "headline": "11 years. One system. Built from scratch.",
     "intro": "From 2013 to 2024, I founded and led SeoFood - an e-commerce company with entirely self-developed infrastructure.",
     "systems": {

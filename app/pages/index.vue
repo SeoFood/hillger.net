@@ -12,7 +12,10 @@ useHead({
 <template>
   <div class="page">
     <TheHero />
-    <CaseStudy />
+    <div id="projects" class="scroll-mt-20">
+      <TypeWhisperProject />
+      <CaseStudy />
+    </div>
     <ExperienceTimeline />
     <Background />
     <TechStack />

@@ -6,7 +6,7 @@ const highlightKeys = ['item1', 'item2', 'item3']
 </script>
 
 <template>
-  <section id="project" class="bg-bg-secondary">
+  <section class="bg-bg-secondary">
     <div class="container">
       <span class="inline-block font-display text-xs text-accent uppercase tracking-widest mb-4">{{ t('caseStudy.label') }}</span>
       <h2 class="mb-6">{{ t('caseStudy.headline') }}</h2>
