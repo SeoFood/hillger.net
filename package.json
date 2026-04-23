@@ -2,6 +2,7 @@
   "name": "hillger-net",
   "type": "module",
   "private": true,
+  "packageManager": "bun@1.3.13",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
