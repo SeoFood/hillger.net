@@ -3,7 +3,7 @@ export const deskOrbitConfig = {
   appStoreUrl: 'https://apps.apple.com/app/id6798378728',
   appStoreAvailable: false,
   bundleId: 'com.seofood.DeskOrbit',
-  contact: 'marco@seofood.de',
+  contact: 'hello@typewhisper.com',
   accent: '#0078D7',
   copyright: '© 2026 Marco Hillger',
   owner: 'Marco Hillger',
@@ -211,7 +211,7 @@ export const deskOrbitProductCopy: Record<DeskOrbitLanguage, ProductCopy> = {
       ],
       contactTitle: 'Noch eine Frage?',
       contactText: 'Schreibe direkt an Marco Hillger. Supportnachrichten sind freiwillig und werden nur zur Bearbeitung deiner Anfrage verwendet.',
-      contactCta: 'marco@seofood.de',
+      contactCta: 'hello@typewhisper.com',
     },
     compatibility: {
       title: 'Kompatibilität',
@@ -297,7 +297,7 @@ export const deskOrbitProductCopy: Record<DeskOrbitLanguage, ProductCopy> = {
         { title: 'How do Pro, trial and restoration work?', paragraphs: ['Free includes one desk and two positions. The one-time 14-day trial unlocks all Pro features. Lifetime is a non-consumable purchase for the same Apple Account. Use “Restore Purchases” in Settings only when you want DeskOrbit to ask Apple to synchronize purchases. A downgrade never deletes saved data.'] },
         { title: 'What is shared through iCloud and Apple Watch?', paragraphs: ['iCloud sync is optional and available during Pro or trial. Desk profiles, positions and automations sync; Bluetooth bindings remain local to each device. The Watch normally sends commands through a reachable iPhone. Without the phone, pair the Watch once with the desk; it connects only when needed.'] },
       ],
-      contactTitle: 'Still have a question?', contactText: 'Write directly to Marco Hillger. Support messages are voluntary and used only to answer your request.', contactCta: 'marco@seofood.de',
+      contactTitle: 'Still have a question?', contactText: 'Write directly to Marco Hillger. Support messages are voluntary and used only to answer your request.', contactCta: 'hello@typewhisper.com',
     },
     compatibility: {
       title: 'Compatibility', text: 'DeskOrbit is intended for compatible electric sit-stand desks with Bluetooth control. Specific manufacturers or models will only be named after reliable testing.',
@@ -362,7 +362,7 @@ export const deskOrbitProductCopy: Record<DeskOrbitLanguage, ProductCopy> = {
         { title: 'Comment fonctionnent Pro, l’essai et la restauration ?', paragraphs: ["La version gratuite inclut un bureau et deux positions. L’essai unique de 14 jours déverrouille Pro. La restauration est déclenchée uniquement par l’action de l’utilisateur et une rétrogradation ne supprime aucune donnée."] },
         { title: 'Que partagent iCloud et l’Apple Watch ?', paragraphs: ["iCloud synchronise facultativement les profils, positions et automatisations, jamais les associations Bluetooth locales. La Watch passe par l’iPhone joignable ou se connecte au bureau à la demande après un jumelage local."] },
       ],
-      contactTitle: 'Une autre question ?', contactText: 'Écrivez directement à Marco Hillger. Les messages d’assistance sont volontaires et servent uniquement à répondre à votre demande.', contactCta: 'marco@seofood.de',
+      contactTitle: 'Une autre question ?', contactText: 'Écrivez directement à Marco Hillger. Les messages d’assistance sont volontaires et servent uniquement à répondre à votre demande.', contactCta: 'hello@typewhisper.com',
     },
     compatibility: {
       title: 'Compatibilité', text: 'DeskOrbit est conçu pour les bureaux électriques assis-debout compatibles avec contrôle Bluetooth. Les fabricants ou modèles précis ne seront nommés qu’après des tests fiables.',
@@ -426,7 +426,7 @@ export const deskOrbitProductCopy: Record<DeskOrbitLanguage, ProductCopy> = {
         { title: '¿Cómo funcionan Pro, la prueba y la restauración?', paragraphs: ['Gratis incluye un escritorio y dos posiciones. La prueba única de 14 días desbloquea Pro. La restauración solo se inicia por acción del usuario y una reducción nunca elimina datos.'] },
         { title: '¿Qué comparten iCloud y Apple Watch?', paragraphs: ['iCloud sincroniza opcionalmente perfiles, posiciones y automatizaciones, nunca asociaciones Bluetooth locales. Watch usa el iPhone cuando está disponible o se conecta al escritorio bajo demanda tras enlazarlo localmente.'] },
       ],
-      contactTitle: '¿Tienes otra pregunta?', contactText: 'Escribe directamente a Marco Hillger. Los mensajes de soporte son voluntarios y solo se usan para responder a tu solicitud.', contactCta: 'marco@seofood.de',
+      contactTitle: '¿Tienes otra pregunta?', contactText: 'Escribe directamente a Marco Hillger. Los mensajes de soporte son voluntarios y solo se usan para responder a tu solicitud.', contactCta: 'hello@typewhisper.com',
     },
     compatibility: {
       title: 'Compatibilidad', text: 'DeskOrbit está pensado para escritorios eléctricos de altura regulable compatibles con control Bluetooth. Solo se indicarán fabricantes o modelos concretos tras pruebas fiables.',
@@ -490,7 +490,7 @@ export const deskOrbitProductCopy: Record<DeskOrbitLanguage, ProductCopy> = {
         { title: 'Come funzionano Pro, la prova e il ripristino?', paragraphs: ['La versione gratuita include una scrivania e due posizioni. La prova unica di 14 giorni sblocca Pro. Il ripristino parte solo dopo un’azione dell’utente e il downgrade non elimina dati.'] },
         { title: 'Cosa condividono iCloud e Apple Watch?', paragraphs: ["iCloud sincronizza facoltativamente profili, posizioni e automazioni, mai le associazioni Bluetooth locali. Watch usa l’iPhone raggiungibile oppure si collega alla scrivania su richiesta dopo l’abbinamento locale."] },
       ],
-      contactTitle: 'Un’altra domanda?', contactText: 'Scrivi direttamente a Marco Hillger. I messaggi al supporto sono volontari e usati solo per rispondere alla richiesta.', contactCta: 'marco@seofood.de',
+      contactTitle: 'Un’altra domanda?', contactText: 'Scrivi direttamente a Marco Hillger. I messaggi al supporto sono volontari e usati solo per rispondere alla richiesta.', contactCta: 'hello@typewhisper.com',
     },
     compatibility: {
       title: 'Compatibilità', text: 'DeskOrbit è pensato per scrivanie elettriche regolabili compatibili con controllo Bluetooth. Produttori o modelli specifici saranno indicati solo dopo test affidabili.',
@@ -514,7 +514,7 @@ export const deskOrbitPrivacyCopy: Record<DeskOrbitLanguage, PrivacyCopy> = {
       { title: 'Löschen und Verwalten', paragraphs: ['Gelöschte Tische, Positionen oder Automationen werden bei aktivem iCloud-Sync auch synchronisiert gelöscht. Das Entfernen der App löscht deren lokale Daten gemäß dem Betriebssystem. iCloud-Daten und Käufe können mit Apples Werkzeugen verwaltet werden.'] },
       { title: 'Supportnachrichten', paragraphs: ['Supportnachrichten sind freiwillig und werden nur zur Bearbeitung der Anfrage verwendet.'] },
     ],
-    contactTitle: 'Datenschutzfragen', contactText: 'Für Fragen zum Datenschutz kontaktiere Marco Hillger unter:', contactCta: 'marco@seofood.de',
+    contactTitle: 'Datenschutzfragen', contactText: 'Für Fragen zum Datenschutz kontaktiere Marco Hillger unter:', contactCta: 'hello@typewhisper.com',
     footer: deskOrbitProductCopy.de.footer,
   },
   en: {
@@ -529,7 +529,7 @@ export const deskOrbitPrivacyCopy: Record<DeskOrbitLanguage, PrivacyCopy> = {
       { title: 'Deletion and management', paragraphs: ['Deleting desks, positions or automations creates synchronized deletions when iCloud sync is active. Removing the app removes its local data according to the operating system. The user can manage iCloud data and purchases with the tools provided by Apple.'] },
       { title: 'Support messages', paragraphs: ['Support messages are voluntary and are handled only to answer the request.'] },
     ],
-    contactTitle: 'Privacy questions', contactText: 'For privacy questions, contact Marco Hillger at:', contactCta: 'marco@seofood.de', footer: deskOrbitProductCopy.en.footer,
+    contactTitle: 'Privacy questions', contactText: 'For privacy questions, contact Marco Hillger at:', contactCta: 'hello@typewhisper.com', footer: deskOrbitProductCopy.en.footer,
   },
   fr: {
     meta: { title: 'Politique de confidentialité – DeskOrbit', description: 'Politique de confidentialité de DeskOrbit : stockage local, synchronisation CloudKit privée facultative, StoreKit et messages volontaires.' },
@@ -543,7 +543,7 @@ export const deskOrbitPrivacyCopy: Record<DeskOrbitLanguage, PrivacyCopy> = {
       { title: 'Suppression et gestion', paragraphs: ["La suppression de bureaux, positions ou automatisations est synchronisée lorsque iCloud est actif. La suppression de l’app efface ses données locales selon le système. L’utilisateur peut gérer ses données iCloud et ses achats avec les outils Apple."] },
       { title: 'Messages à l’assistance', paragraphs: ['Les messages au support sont volontaires et servent uniquement à répondre à la demande.'] },
     ],
-    contactTitle: 'Questions de confidentialité', contactText: 'Pour toute question de confidentialité, contactez Marco Hillger :', contactCta: 'marco@seofood.de', footer: deskOrbitProductCopy.fr.footer,
+    contactTitle: 'Questions de confidentialité', contactText: 'Pour toute question de confidentialité, contactez Marco Hillger :', contactCta: 'hello@typewhisper.com', footer: deskOrbitProductCopy.fr.footer,
   },
   es: {
     meta: { title: 'Política de privacidad – DeskOrbit', description: 'Política de privacidad de DeskOrbit: almacenamiento local, sincronización privada opcional con CloudKit, StoreKit y mensajes voluntarios.' },
@@ -557,7 +557,7 @@ export const deskOrbitPrivacyCopy: Record<DeskOrbitLanguage, PrivacyCopy> = {
       { title: 'Eliminación y gestión', paragraphs: ['Al eliminar escritorios, posiciones o automatizaciones, la eliminación se sincroniza si iCloud está activo. Eliminar la app borra sus datos locales según el sistema operativo. El usuario puede gestionar datos de iCloud y compras con las herramientas de Apple.'] },
       { title: 'Mensajes de soporte', paragraphs: ['Los mensajes de soporte son voluntarios y se usan solo para responder a la solicitud.'] },
     ],
-    contactTitle: 'Preguntas de privacidad', contactText: 'Para preguntas de privacidad, contacta con Marco Hillger:', contactCta: 'marco@seofood.de', footer: deskOrbitProductCopy.es.footer,
+    contactTitle: 'Preguntas de privacidad', contactText: 'Para preguntas de privacidad, contacta con Marco Hillger:', contactCta: 'hello@typewhisper.com', footer: deskOrbitProductCopy.es.footer,
   },
   it: {
     meta: { title: 'Informativa sulla privacy – DeskOrbit', description: 'Informativa privacy di DeskOrbit: dati locali, sincronizzazione CloudKit privata opzionale, StoreKit e messaggi volontari.' },
@@ -571,6 +571,6 @@ export const deskOrbitPrivacyCopy: Record<DeskOrbitLanguage, PrivacyCopy> = {
       { title: 'Eliminazione e gestione', paragraphs: ["L’eliminazione di scrivanie, posizioni o automazioni viene sincronizzata quando iCloud è attivo. La rimozione dell’app elimina i dati locali secondo il sistema operativo. L’utente può gestire dati iCloud e acquisti con gli strumenti Apple."] },
       { title: 'Messaggi al supporto', paragraphs: ['I messaggi al supporto sono volontari e usati solo per rispondere alla richiesta.'] },
     ],
-    contactTitle: 'Domande sulla privacy', contactText: 'Per domande sulla privacy, contatta Marco Hillger:', contactCta: 'marco@seofood.de', footer: deskOrbitProductCopy.it.footer,
+    contactTitle: 'Domande sulla privacy', contactText: 'Per domande sulla privacy, contatta Marco Hillger:', contactCta: 'hello@typewhisper.com', footer: deskOrbitProductCopy.it.footer,
   },
 }
