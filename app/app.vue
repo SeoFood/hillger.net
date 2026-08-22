@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const route = useRoute()
+const isDeskOrbit = computed(() => route.path === '/deskorbit' || route.path.startsWith('/deskorbit/'))
+
 useHead({
   script: [
     {
@@ -49,7 +52,7 @@ useHead({
 
 <template>
   <div class="min-h-screen flex flex-col">
-    <TheHeader />
+    <TheHeader v-if="!isDeskOrbit" />
     <main class="flex-1">
       <NuxtPage />
     </main>

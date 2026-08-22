@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     url: 'https://www.hillger.net',
   },
 
-  css: ['~/assets/css/base.css'],
+  css: ['~/assets/css/base.css', '~/assets/css/deskorbit.css'],
 
   i18n: {
     locales: [
@@ -120,5 +120,19 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'vercel-static',
+    prerender: {
+      routes: [
+        '/deskorbit',
+        '/deskorbit/privacy',
+        '/deskorbit/en',
+        '/deskorbit/en/privacy',
+        '/deskorbit/fr',
+        '/deskorbit/fr/privacy',
+        '/deskorbit/es',
+        '/deskorbit/es/privacy',
+        '/deskorbit/it',
+        '/deskorbit/it/privacy',
+      ],
+    },
   },
 })
